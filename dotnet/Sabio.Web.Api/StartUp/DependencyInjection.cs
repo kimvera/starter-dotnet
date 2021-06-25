@@ -45,6 +45,14 @@ namespace Sabio.Web.StartUp
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddSingleton<IUserService, UserService>();
+
+            services.AddSingleton<IAddressesService, AddressesService>();
+
+            services.AddSingleton<IUsersService, UsersService>();
+
+            services.AddSingleton<IFriendService, FriendService>();
+
+            services.AddSingleton<ICourseService, CourseService>();
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
